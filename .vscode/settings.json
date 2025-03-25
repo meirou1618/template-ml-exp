@@ -1,0 +1,40 @@
+{
+    // "python.testing.pytestArgs": [
+    //     "tests",
+    //     //"--cov=src",
+    //     //"--cov-branch",
+    //     //"--cov-report=xml",
+    //     //"--cov-report=html",
+    //     "-v"
+    // ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "editor.formatOnSave": true,
+    "python.languageServer": "Pylance",
+    // "files.exclude": {
+    //     "**/.git": true,
+    //     "**/.svn": true,
+    //     "**/.hg": true,
+    //     "**/CVS": true,
+    //     "**/.DS_Store": true,
+    //     "**/Thumbs.db": true,
+    //     "**/.venv": true,
+    //     "**/.pytest_cache": true,
+    //     "**/.ruff_cache": true,
+    //     "**/__pycache__": true
+    // },
+    // "coverage-gutters.coverageReportFileName": "htmlcov/**/index.html",
+    // "coverage-gutters.showLineCoverage": false,
+    // "coverage-gutters.showRulerCoverage": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "python.analysis.diagnosticMode": "workspace",
+    "ruff.format.args": [
+        "--config=pyproject.toml"
+    ],
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true,
+    "notebook.formatOnSave.enabled": true
+}
