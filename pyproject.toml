@@ -6,4 +6,12 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "click>=8.1.8",
+    "numpy>=2.2.4",
+    "pandas>=2.2.3",
 ]
+
+[tool.ruff]
+# 1行当たりの長さ
+line-length = 79
+# インデント幅
+indent-width = 4
