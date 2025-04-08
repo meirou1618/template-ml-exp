@@ -31,7 +31,7 @@ class TemplateModelRepository(ModelRepository):
 
 class DataRepository(ABC):
     @abstractmethod
-    def load(self, X_path: str, y_path: str) -> TemplateData:
+    def load(self) -> TemplateData:
         pass
 
 

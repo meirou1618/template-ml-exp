@@ -3,8 +3,8 @@ import logging
 from domain.domain_services import ModelTrainer
 from domain.experiment import Experiment
 from infrastructure.repository import (
-    TemplateDataRepository,
-    TemplateModelRepository,
+    DataRepository,
+    ModelRepository,
 )
 
 logger = logging.getLogger(__name__)
@@ -15,8 +15,8 @@ class TemplateService:
 
     def __init__(
         self,
-        model_repo: TemplateModelRepository,
-        data_repo: TemplateDataRepository,
+        model_repo: ModelRepository,
+        data_repo: DataRepository,
     ) -> None:
         self.model_repo = model_repo
         self.data_repo = data_repo
