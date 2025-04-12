@@ -1,18 +1,9 @@
-from abc import ABC, abstractmethod
-
 import pandas as pd
 
-from domain.data import TemplateData
-from domain.ml_model import TemplateMLModel
+from domain.data import TemplateTrainData
 from domain.model import Model, TemplateModel
-
-
-class ModelRepository(ABC):
-    """データベースとの連携を担うクラス"""
-
-    @abstractmethod
-    def load(self) -> Model:
-        pass
+from domain.repository import DataRepository, ModelRepository
+from infrastructure.template_ml_model import TemplateMLModel
 
 
 class TemplateModelRepository(ModelRepository):
@@ -29,18 +20,12 @@ class TemplateModelRepository(ModelRepository):
         return model
 
 
-class DataRepository(ABC):
-    @abstractmethod
-    def load(self) -> TemplateData:
-        pass
-
-
 class TemplateDataRepository(DataRepository):
     def __init__(self, X_path: str, y_path: str) -> None:
         self.X_path = X_path
         self.y_path = y_path
 
-    def load(self) -> TemplateData:
+    def load(self) -> TemplateTrainData:
         X = pd.read_csv(self.X_path)
         y = pd.read_csv(self.y_path)
-        return TemplateData(X=X, y=y)
+        return TemplateTrainData(X=X, y=y)

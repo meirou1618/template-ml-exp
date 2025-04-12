@@ -4,6 +4,6 @@ import pandas as pd
 
 
 @dataclass
-class TemplateData:
+class TemplateTrainData:
     X: pd.DataFrame
     y: pd.DataFrame

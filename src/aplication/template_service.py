@@ -2,7 +2,7 @@ import logging
 
 from domain.domain_services import ModelTrainer
 from domain.experiment import Experiment
-from infrastructure.repository import (
+from infrastructure.template_repository import (
     DataRepository,
     ModelRepository,
 )

@@ -5,7 +5,7 @@ import click
 
 from aplication.aplication_service import AplicationServiceHandler
 from aplication.template_service import TemplateService
-from infrastructure.repository import (
+from infrastructure.template_repository import (
     TemplateDataRepository,
     TemplateModelRepository,
 )
