@@ -10,15 +10,17 @@ MLモデルのライフサイクルや実験履歴を明確なドメインモデ
 src/ 
 ├── domain/
     ├── model.py # モデルエンティティ（Model）
-    ├── ml_model.py # MLモデルの抽象クラス（MLModel） 
+    ├── ml_model.py # MLモデルのインターフェイス（MLModel） 
     ├── experiment.py # アグリゲートルート（Experiment） 
     ├── domain_services.py # ドメインサービス（Trainer, Predictor） 
     ├── data.py # 入力データの構造（TemplateTrainData）
+    ├── repository.py # 永続化インターフェース（ModelRepository, DataRepository）
 ├── application/
     ├── aplication_service.py # アプリケーションサービスの実行
     ├── template_service.py # 各種アプリケーションサービス（TemplateService）
 ├── infrastracture/
-    ├── repository.py # 永続化インターフェース（TemplateModelRepository, TemplateDataRepository）
+    ├── template_repository.py # リポジトリの実装クラス（TemplateModelRepository, TemplateDataRepository）
+    ├── ml_model.py # MLモデルの実装クラス（TemplateMLModel）
 └── cli.py # 実行コマンド
 ```
 
